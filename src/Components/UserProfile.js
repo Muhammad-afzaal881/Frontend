@@ -1,7 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import { UserContext } from "../Components/Usercontext";
 import "./UserProfile.css";
-import { redirect, useNavigate } from "react-router-dom";
+import {useNavigate } from "react-router-dom";
 function UserProfile() {
   const { user, setUser } = useContext(UserContext);
   const [loading, setLoading] = useState(true);
