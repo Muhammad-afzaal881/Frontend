@@ -15,7 +15,7 @@ function Login() {
 
     try {
       // 1️⃣ Login request
-      const res = await fetch("https://backend-code-production-9f20.up.railway.app//login", {
+      const res = await fetch("https://backend-code-production-9f20.up.railway.app/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, password }),
@@ -28,7 +28,7 @@ function Login() {
       localStorage.setItem("token", data.token);
 
       // 3️⃣ Fetch profile
-      const profileRes = await fetch("https://backend-code-production-9f20.up.railway.app//profile", {
+      const profileRes = await fetch("https://backend-code-production-9f20.up.railway.app/profile", {
         headers: { Authorization: `Bearer ${data.token}` },
       });
 

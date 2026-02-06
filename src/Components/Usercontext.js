@@ -13,7 +13,7 @@ function UserProvider({ children }) {
   const token = localStorage.getItem("token");
 
   if (token) {
-    fetch("https://backend-code-production-9f20.up.railway.app//profile", { // ✅ Correct URL
+    fetch("https://backend-code-production-9f20.up.railway.app/profile", { // ✅ Correct URL
       headers: {
         Authorization: `Bearer ${token}`,
       },

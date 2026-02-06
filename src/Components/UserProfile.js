@@ -16,7 +16,7 @@ const navigate = useNavigate();
     async function fetchProfile() {
       const token = localStorage.getItem("token");
       if (token && !user) {
-        const res = await fetch("https://backend-code-production-9f20.up.railway.app//profile", {
+        const res = await fetch("https://backend-code-production-9f20.up.railway.app/profile", {
           headers: { Authorization: `Bearer ${token}` },
         });
         const data = await res.json();

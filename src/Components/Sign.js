@@ -24,7 +24,7 @@ function Sign() {
 
     try {
       // 1️⃣ Signup
-      const res = await fetch("https://backend-code-production-9f20.up.railway.app//signup", {
+      const res = await fetch("https://backend-code-production-9f20.up.railway.app/signup", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -46,7 +46,7 @@ function Sign() {
       localStorage.setItem("token", data.token);
 
       // 3️⃣ Fetch full user profile
-      const profileRes = await fetch("https://backend-code-production-9f20.up.railway.app//profile", {
+      const profileRes = await fetch("https://backend-code-production-9f20.up.railway.app/profile", {
         headers: { Authorization: `Bearer ${data.token}` },
       });
 
