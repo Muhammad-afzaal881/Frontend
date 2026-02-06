@@ -1,0 +1,209 @@
+/* ================= CONTACT SECTION ================= */
+.contact {
+  width: 100%;
+  min-height: 100vh;
+  padding: 60px 8%;
+  background-color: #0f172a;
+  color: #ffffff;
+  font-family: "Segoe UI", sans-serif;
+  box-sizing: border-box;
+}
+
+/* ================= TOP SECTION ================= */
+.top {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.top h1 {
+  font-size: 42px;
+  margin-bottom: 10px;
+  color: #38bdf8;
+}
+
+.top h3 {
+  font-size: 18px;
+  font-weight: 400;
+  color: #cbd5f5;
+}
+
+/* ================= CONTENT GRID ================= */
+.contact-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  width: 100%;
+}
+
+/* ================= COMMON BOX ================= */
+.left,
+.right {
+  background: #020617;
+  padding: 30px;
+  border-radius: 12px;
+}
+
+/* ================= LEFT SIDE ================= */
+.left h1 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #38bdf8;
+}
+
+.left label {
+  font-size: 14px;
+  color: #94a3b8;
+}
+
+.left h2 {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+/* ================= SOCIAL MEDIA ================= */
+.social_media {
+  margin-top: 20px;
+  display: flex;
+  gap: 15px;
+}
+
+.social_media button {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  background: #1e293b;
+  color: #38bdf8;
+  font-size: 20px;
+  transition: all 0.3s ease;
+}
+
+.social_media button:hover {
+  background: #38bdf8;
+  color: #020617;
+}
+
+/* ================= RIGHT FORM ================= */
+.right h1 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #38bdf8;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+form label {
+  font-size: 14px;
+  color: #94a3b8;
+}
+
+form input,
+form textarea {
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  background: #1e293b;
+  color: #ffffff;
+  font-size: 14px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+form textarea {
+  resize: none;
+  height: 120px;
+}
+
+form input::placeholder,
+form textarea::placeholder {
+  color: #64748b;
+}
+
+/* ================= BUTTON ================= */
+form button {
+  margin-top: 15px;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  background: #38bdf8;
+  color: #020617;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+form button:hover {
+  background: #0ea5e9;
+}
+
+/* ================= MOBILE RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .contact {
+    padding: 40px 5%;
+    min-height: auto;
+  }
+
+  .top {
+    margin-bottom: 30px;
+  }
+
+  .top h1 {
+    font-size: 28px;
+  }
+
+  .top h3 {
+    font-size: 16px;
+  }
+
+  .contact-content {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .left,
+  .right {
+    padding: 20px;
+  }
+
+  .left h1,
+  .right h1 {
+    font-size: 22px;
+  }
+
+  .left h2 {
+    font-size: 15px;
+  }
+
+  form input,
+  form textarea {
+    font-size: 13px;
+    padding: 10px;
+  }
+
+  form textarea {
+    height: 100px;
+  }
+
+  form button {
+    font-size: 15px;
+    padding: 10px;
+  }
+
+  .social_media {
+    justify-content: center;
+  }
+
+  .social_media button {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+  }
+}

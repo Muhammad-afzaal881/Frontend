@@ -1,0 +1,98 @@
+/* Container for the profile card */
+.Profile_creation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 20px;
+  background: #0f172a; /* light background */
+  min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Card styling */
+.card {
+  background-color: #020617;
+  width: 350px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  text-align: center;
+  padding: 30px 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+/* Card hover effect */
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+/* Avatar image */
+.card img.avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  background-color: #f0f0f0;
+  border: 4px solid #00e0ff; /* accent color border */
+  margin-bottom: 20px;
+  transition: transform 0.3s ease;
+  margin-left: 90px;
+}
+
+.card img.avatar:hover {
+  transform: scale(1.05);
+}
+
+/* Name and info */
+.card h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color:white;
+}
+
+.card p {
+  font-size: 16px;
+  color: white;
+  margin: 5px 0;
+}
+
+/* Social media buttons */
+.social {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.social button {
+   width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 1px solid #00e0ff;
+  background: transparent;
+  color: #00e0ff;
+  font-size: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s ease;
+}
+
+.social button:hover {
+  background: #00e0ff;
+  color: #000;
+  transform: translateY(-4px);
+}
+
+/* Responsive */
+@media (max-width: 400px) {
+  .card {
+    width: 90%;
+    padding: 25px 15px;
+  }
+  .card h1 {
+    font-size: 20px;
+  }
+}

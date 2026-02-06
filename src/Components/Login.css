@@ -1,0 +1,94 @@
+.Account_creation {
+  width: 100%;
+  min-height: 100vh;
+  background: #0f172a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+/* ================= LOGIN CARD ================= */
+.Login {
+  width: 380px;
+  max-width: 100%;
+  background: #020617;
+  padding: 30px;
+  border-radius: 14px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.45);
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+/* ================= HEADING ================= */
+.Login h1 {
+  color: #38bdf8;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+/* ================= LABEL ================= */
+.Login label {
+  display: block;
+  font-size: 14px;
+  color: #94a3b8;
+  margin-bottom: 6px;
+}
+
+/* ================= INPUT ================= */
+.Login input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 16px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  background: #1e293b;
+  color: #ffffff;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.Login input::placeholder {
+  color: #64748b;
+}
+
+/* ================= BUTTON ================= */
+.Login button {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  background: #38bdf8;
+  color: #020617;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+  margin-top: 10px;
+}
+
+.Login button:hover {
+  background: #0ea5e9;
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 480px) {
+  .Login {
+    padding: 22px;
+  }
+
+  .Login h1 {
+    font-size: 22px;
+  }
+
+  .Login input {
+    padding: 10px;
+    font-size: 13px;
+  }
+
+  .Login button {
+    font-size: 15px;
+    padding: 10px;
+  }
+}

@@ -1,0 +1,158 @@
+/* Google Font (optional but recommended) */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+.home {
+  min-height: 100vh;
+  padding: 60px 10%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: #fff;
+}
+
+/* LEFT CONTENT */
+.home-content {
+  max-width: 600px;
+}
+
+.home-content > button {
+  background: rgba(255, 255, 255, 0.15);
+  color: #00e0ff;
+  border: 1px solid #00e0ff;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.home-content h1 {
+  font-size: 48px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.home-content h1 b {
+  color: #00e0ff;
+}
+
+.home-content h3 {
+  font-size: 24px;
+  font-weight: 500;
+  color: #cfd8dc;
+  margin-bottom: 15px;
+}
+
+.home-content h4 {
+  font-size: 16px;
+  font-weight: 400;
+  color: #b0bec5;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+/* BUTTONS */
+.home-btns {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.btn-primary {
+  background: #00e0ff;
+  color: #000;
+  padding: 12px 26px;
+  border: none;
+  border-radius: 30px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: #00bcd4;
+}
+
+.btn-secondary {
+  background: transparent;
+  color: #00e0ff;
+  padding: 12px 26px;
+  border: 1px solid #00e0ff;
+  border-radius: 30px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background: #00e0ff;
+  color: #000;
+}
+
+/* SOCIAL ICONS */
+.social_media {
+  display: flex;
+  gap: 15px;
+}
+
+.social_media button {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 1px solid #00e0ff;
+  background: transparent;
+  color: #00e0ff;
+  font-size: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s ease;
+}
+
+.social_media button:hover {
+  background: #00e0ff;
+  color: #000;
+  transform: translateY(-4px);
+}
+
+/* RIGHT IMAGE */
+.Image img {
+  width: 350px;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #00e0ff;
+  box-shadow: 0 0 40px rgba(0, 224, 255, 0.4);
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .home {
+    flex-direction: column-reverse;
+    text-align: center;
+    padding: 40px 5%;
+  }
+
+  .home-btns {
+    justify-content: center;
+  }
+
+  .home-content h1 {
+    font-size: 38px;
+  }
+
+  .Image img {
+    width: 280px;
+    height: 280px;
+  }
+}
