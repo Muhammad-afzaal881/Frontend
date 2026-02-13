@@ -96,7 +96,7 @@ function Home() {
       {/* Image */}
       <div className="Image">
         <img
-          src="https://media-mct1-2.cdn.whatsapp.net/v/t61.24694-24/604524685_1388329689460654_4444043410084305285_n.jpg?ccb=11-4&oh=01_Q5Aa3gHXhAyA23nxvZ6v34seCwmDq4xZJ2fYpCUc2D8CdHqZzA&oe=698E6E6E&_nc_sid=5e03e0&_nc_cat=107"
+          src="https://pps.whatsapp.net/v/t61.24694-24/604524685_1388329689460654_4444043410084305285_n.jpg?ccb=11-4&oh=01_Q5Aa3wEYxxgaJ6cYQSy7SbhguWRtPpFiQd4ah4nUC5t92seKbw&oe=699AF4AE&_nc_sid=5e03e0&_nc_cat=107"
           alt="Afzaal"
         />
       </div>
