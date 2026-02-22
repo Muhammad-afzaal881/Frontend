@@ -96,7 +96,7 @@ function Home() {
       {/* Image */}
       <div className="Image">
         <img
-          src={"/myphoto.jpg"}
+          src={"https://www.upwork.com/profile-portraits/c15kxcRv4NHdMksQDHqBUDPQxQ98pyN-NlEIuF-h2cKXqFTOhXQ0mgSo63A3YCWWzz"}
           alt="Afzaal"
         />
       </div>
