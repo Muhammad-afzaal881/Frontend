@@ -1,7 +1,7 @@
 import "./Skills.css";
 // Fa (FontAwesome) aur Di (DevIcons) ka mix jo hamesha chalta hai
 import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaGitAlt, FaBootstrap, FaNodeJs } from "react-icons/fa";
-import { DiMongodb, DiDatabase } from "react-icons/di"; // Di stable hai backend ke liye
+import { DiMongodb } from "react-icons/di"; // Di stable hai backend ke liye
 import { SiExpress } from "react-icons/si"; 
 
 function Skills() {
