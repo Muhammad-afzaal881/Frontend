@@ -34,14 +34,18 @@ function Home() {
         <h1>
           Hi, I'm <b>Muhammad Afzaal</b>
         </h1>
-        <h3>Frontend Developer & UI/UX Designer</h3>
-        <h4>
-          I help startups and businesses build clean, responsive, and
-          <br />
-          high-performance frontend interfaces using HTML, CSS, JavaScript,
-          <br />
-          and React.
-        </h4>
+       
+       
+
+<h3>
+  A React & Node.js Developer who builds
+  complete web applications from frontend UI to backend APIs.
+</h3>
+
+<h4>
+  I help startups and businesses build clean, scalable, and high-performance
+  web applications using modern technologies.
+</h4>
 
         {/* Buttons */}
         <div className="home-btns">
@@ -96,7 +100,7 @@ function Home() {
       {/* Image */}
       <div className="Image">
         <img
-          src={"https://www.upwork.com/profile-portraits/c15kxcRv4NHdMksQDHqBUDPQxQ98pyN-NlEIuF-h2cKXqFTOhXQ0mgSo63A3YCWWzz"}
+          src={"/myphoto.jpg"}
           alt="Afzaal"
         />
       </div>
