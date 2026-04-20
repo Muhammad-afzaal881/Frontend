@@ -1,0 +1,225 @@
+/* 1. Global Reset - Sabse zaroori step */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box !important;
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 2. Main Wrapper - Screen ke center mein lane ke liye */
+.auth-wrapper {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f1f5f9; /* Modern light gray background */
+  padding: 20px;
+}
+
+/* 3. Container - Jo Tablet/PC par size chota nahi hone dega */
+.auth-container {
+  width: 100%;
+  max-width: 420px; /* PC par size lock */
+  min-width: 320px; /* Mobile par minimum size */
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0; /* Tablet/PC par shrink hone se rokega */
+}
+
+/* 4. Card - Safaid dabba */
+.auth-card {
+  background: #ffffff;
+  padding: 2.5rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 5. Form Structure */
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem; /* Fields ke darmiyan barabar fasla */
+  width: 100%;
+}
+
+.input-group {
+  width: 100%;
+  display: block;
+}
+
+.input-wrapper {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+/* 6. Input Field - ASLI PC/TABLET FIX */
+.input-field {
+  width: 100% !important; /* Pura space lega */
+  min-width: 100%; /* Chota hone se rokega */
+  height: 52px; /* Fixed height for premium feel */
+  padding: 0 15px 0 48px; /* Left se space icon ke liye */
+  border: 1.5px solid #e2e8f0;
+  border-radius: 12px;
+  font-size: 1rem;
+  background-color: #f8fafc;
+  outline: none;
+  transition: all 0.3s ease;
+  color: #1e293b;
+  display: block;
+}
+
+.input-field:focus {
+  border-color: #3b82f6;
+  background-color: #ffffff;
+  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1);
+}
+
+/* 7. Icons & Buttons placement */
+.input-icon-fixed {
+  position: absolute;
+  left: 16px;
+  color: #94a3b8;
+  z-index: 10;
+}
+
+.toggle-password-fixed {
+  position: absolute;
+  right: 16px;
+  background: none;
+  border: none;
+  color: #94a3b8;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  z-index: 10;
+  padding: 0;
+}
+
+/* 8. Submit Button */
+.auth-submit-btn {
+  width: 100%;
+  height: 52px;
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: all 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.auth-submit-btn:hover {
+  background-color: #2563eb;
+  transform: translateY(-1px);
+}
+
+.auth-submit-btn:disabled {
+  background-color: #94a3b8;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* 9. Header & Footer Styling */
+.auth-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.auth-header h2 {
+  font-size: 1.85rem;
+  color: #0f172a;
+  margin-bottom: 8px;
+  font-weight: 800;
+}
+
+.auth-header p {
+  color: #64748b;
+  font-size: 0.95rem;
+}
+
+.auth-footer {
+  text-align: center;
+  margin-top: 1.5rem;
+  color: #64748b;
+}
+
+.auth-footer .link {
+  color: #3b82f6;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* 10. Error Banner */
+.error-banner-top {
+  background-color: #fff1f2;
+  color: #e11d48;
+  padding: 12px;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  border: 1px solid #fecdd3;
+  font-size: 0.85rem;
+}
+
+/* 11. Animation */
+.animate-in {
+  animation: slideUp 0.4s ease-out;
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* 12. --- ALL DEVICE RESPONSIVE QUERIES --- */
+
+/* For Tablets */
+@media (max-width: 1024px) {
+  .auth-container {
+    max-width: 400px;
+  }
+}
+
+/* For Mobile Phones */
+@media (max-width: 480px) {
+  .auth-wrapper {
+    padding: 0;
+    background-color: #ffffff; /* Mobile par clean white */
+  }
+  
+  .auth-card {
+    box-shadow: none;
+    padding: 2rem 1.25rem;
+    border-radius: 0; /* Mobile par full screen feel */
+  }
+
+  .auth-header h2 {
+    font-size: 1.6rem;
+  }
+  
+  .input-field {
+    font-size: 16px; /* iOS auto-zoom prevention */
+    height: 48px;
+  }
+
+  .auth-submit-btn {
+    height: 48px;
+  }
+}

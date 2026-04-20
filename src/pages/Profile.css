@@ -1,0 +1,255 @@
+/* --- User Profile Styles --- */
+:root {
+  --primary: #10b981;
+  --admin-gold: #f59e0b;
+  --bg-profile: #f1f5f9;
+  --white: #ffffff;
+  --text-dark: #1e293b;
+  --text-muted: #64748b;
+  --danger: #ef4444;
+}
+
+.buyer-profile-wrapper {
+  min-height: 90vh;
+  background-color: var(--bg-profile);
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  font-family: 'Inter', sans-serif;
+}
+
+.buyer-profile-card {
+  background: var(--white);
+  width: 100%;
+  max-width: 700px;
+  border-radius: 24px;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+
+/* Card Header & Badges */
+.card-header-visual {
+  padding: 20px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f8fafc;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.buyer-status {
+  background: #e0f2fe;
+  color: #0369a1;
+  padding: 6px 14px;
+  border-radius: 50px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.admin-badge {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.edit-profile-btn {
+  background: var(--white);
+  border: 1.5px solid #e2e8f0;
+  padding: 8px 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.edit-profile-btn.save-mode {
+  background: var(--primary);
+  color: white;
+  border-color: var(--primary);
+}
+
+/* Avatar Section */
+.profile-avatar-section {
+  text-align: center;
+  padding: 40px 0 20px;
+}
+
+.avatar-container {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 15px;
+  border-radius: 50%;
+  border: 4px solid var(--white);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.avatar-container.editable {
+  cursor: pointer;
+}
+
+.user-avatar {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: filter 0.3s;
+}
+
+.user-avatar.blur {
+  filter: blur(4px);
+}
+
+.avatar-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 0.8rem;
+  font-weight: 600;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.avatar-container:hover .avatar-overlay {
+  opacity: 1;
+}
+
+.display-name {
+  font-size: 1.5rem;
+  color: var(--text-dark);
+  font-weight: 800;
+}
+
+/* Info Grid Section */
+.user-info-section {
+  padding: 0 40px 30px;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.full-width {
+  grid-column: span 2;
+}
+
+.input-group label {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.static-text {
+  font-size: 1.05rem;
+  color: var(--text-dark);
+  padding: 10px 0;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.static-text.muted {
+  color: var(--text-muted);
+}
+
+.active-input {
+  padding: 12px;
+  border: 1.5px solid #cbd5e1;
+  border-radius: 10px;
+  font-size: 1rem;
+  background: #f8fafc;
+  outline: none;
+}
+
+.active-input:focus {
+  border-color: var(--primary);
+  background: var(--white);
+  box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.1);
+}
+
+/* Bottom Actions */
+.profile-actions {
+  padding: 20px 40px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.admin-dash-btn {
+  background: var(--text-dark);
+  color: white;
+  padding: 14px;
+  border-radius: 12px;
+  border: none;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.logout-btn {
+  background: none;
+  border: 1.5px solid var(--danger);
+  color: var(--danger);
+  padding: 14px;
+  border-radius: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.logout-btn:hover {
+  background: var(--danger);
+  color: white;
+}
+
+/* Spinner */
+.spinner-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.spinner {
+  width: 24px;
+  height: 24px;
+  border: 3px solid rgba(255,255,255,0.3);
+  border-top: 3px solid white;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* --- Responsive --- */
+@media (max-width: 600px) {
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+  .full-width {
+    grid-column: span 1;
+  }
+  .user-info-section {
+    padding: 0 20px 20px;
+  }
+  .buyer-profile-card {
+    border-radius: 0;
+  }
+  .buyer-profile-wrapper {
+    padding: 0;
+  }
+}

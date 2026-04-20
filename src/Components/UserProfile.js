@@ -1,5 +1,5 @@
 import { useContext, useEffect, useState } from "react";
-import { UserContext } from "../Components/Usercontext";
+import { UserContext } from "./Usercontext";
 import "./UserProfile.css";
 import {useNavigate } from "react-router-dom";
 function UserProfile() {

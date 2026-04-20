@@ -1,7 +1,8 @@
 import "./Home.css";
 import { useNavigate } from "react-router-dom";
 import { useContext } from "react";
-import { UserContext } from "../Components/Usercontext";
+// Path ko small 'c' (components) aur sahi folder ke mutabiq update kiya gaya hai
+import { UserContext } from "../Components/Usercontext"; 
 
 function Home() {
   const navigate = useNavigate();
@@ -34,18 +35,16 @@ function Home() {
         <h1>
           Hi, I'm <b>Muhammad Afzaal</b>
         </h1>
-       
-       
 
-<h3>
-  A React & Node.js Developer who builds
-  complete web applications from frontend UI to backend APIs.
-</h3>
+        <h3>
+          A React & Node.js Developer who builds
+          complete web applications from frontend UI to backend APIs.
+        </h3>
 
-<h4>
-  I help startups and businesses build clean, scalable, and high-performance
-  web applications using modern technologies.
-</h4>
+        <h4>
+          I help startups and businesses build clean, scalable, and high-performance
+          web applications using modern technologies.
+        </h4>
 
         {/* Buttons */}
         <div className="home-btns">
@@ -55,9 +54,13 @@ function Home() {
           >
             View my work
           </button>
+
+          {/* Updated Contact Button for WhatsApp */}
           <button
             className="btn-secondary"
-            onClick={() => navigate("/contact")}
+            onClick={() =>
+              window.open("https://wa.me/923004244616?text=Hi Afzaal, I saw your portfolio and want to discuss a project.", "_blank")
+            }
           >
             Contact Me
           </button>

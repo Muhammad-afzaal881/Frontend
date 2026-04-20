@@ -1,0 +1,176 @@
+/* --- Global Reset & Variables --- */
+:root {
+  --primary-color: #2563eb;
+  --secondary-color: #1e293b;
+  --text-gray: #64748b;
+  --white: #ffffff;
+  --bg-light: #f8fafc;
+  --transition: all 0.3s ease;
+}
+
+.about-page {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: var(--secondary-color);
+  overflow-x: hidden;
+}
+
+/* --- Hero Section --- */
+.about-hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+              url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80') center/cover;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--white);
+  padding: 0 20px;
+}
+
+.hero-content h1 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  margin-bottom: 15px;
+  font-weight: 800;
+}
+
+.hero-content p {
+  font-size: clamp(1.1rem, 2vw, 1.5rem);
+  margin-bottom: 30px;
+  opacity: 0.9;
+}
+
+.cta-button {
+  background-color: var(--primary-color);
+  color: var(--white);
+  padding: 12px 30px;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: 600;
+  transition: var(--transition);
+  display: inline-block;
+}
+
+.cta-button:hover {
+  background-color: #1d4ed8;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(37, 99, 235, 0.3);
+}
+
+/* --- Info Section (Grid) --- */
+.about-content {
+  padding: 80px 10%;
+  background: var(--white);
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: center;
+}
+
+.about-text h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: var(--secondary-color);
+}
+
+.about-text p {
+  margin-bottom: 20px;
+  color: var(--text-gray);
+  font-size: 1.1rem;
+}
+
+.learn-more {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: var(--transition);
+}
+
+.learn-more:hover {
+  padding-left: 10px;
+}
+
+.about-image img {
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+  display: block;
+}
+
+/* --- Stats Section --- */
+.about-stats {
+  background-color: var(--bg-light);
+  padding: 60px 10%;
+}
+
+.stats-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  text-align: center;
+}
+
+.stat-card {
+  background: var(--white);
+  padding: 40px 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  transition: var(--transition);
+}
+
+.stat-card:hover {
+  transform: translateY(-10px);
+}
+
+.stat-card h3 {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}
+
+.stat-card p {
+  font-weight: 600;
+  color: var(--text-gray);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* --- Responsive Media Queries --- */
+
+/* Tablets */
+@media (max-width: 992px) {
+  .about-content {
+    padding: 60px 5%;
+  }
+  .about-grid {
+    gap: 30px;
+  }
+}
+
+/* Mobile Devices */
+@media (max-width: 768px) {
+  .about-grid {
+    grid-template-columns: 1fr; /* Image niche chali jayegi */
+    text-align: center;
+  }
+
+  .about-image {
+    order: -1; /* Image text se pehle dikhayi degi mobile par */
+  }
+
+  .about-hero {
+    height: 50vh;
+  }
+
+  .about-text h2 {
+    font-size: 2rem;
+  }
+  
+  .stats-container {
+    grid-template-columns: 1fr; /* Stats aik line mein */
+  }
+}
